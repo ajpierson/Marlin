@@ -105,6 +105,10 @@
 #if ENABLED(ANYCUBIC_4_MAX_PRO_ENDSTOPS)
   #define X_MAX_PIN                           43
   #define Y_STOP_PIN                          19
+#elif ENABLED(ANYCUBIC_4MAX)
+  #ifndef FIL_RUNOUT_PIN
+    #define FIL_RUNOUT_PIN 19
+  #endif
 #elif EITHER(ANYCUBIC_CHIRON, ANYCUBIC_I3MEGA)
   #define Y_STOP_PIN                          42
   #define Z2_MIN_PIN                          43
